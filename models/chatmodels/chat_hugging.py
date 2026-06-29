@@ -7,7 +7,7 @@ load_dotenv()
 llm = HuggingFaceEndpoint(
     repo_id="Qwen/Qwen2.5-7B-Instruct",
     task="text-generation",
-) #llm congiguration for huggingface model. The repo_id parameter specifies the model repository on Hugging Face, and the task parameter indicates the type of task to perform (in this case, text generation).
+) #llm congiguration for huggingface model. The repo_id parameter specifies the models repository on Hugging Face, and the task parameter indicates the type of task to perform (in this case, text generation).
 
 model = ChatHuggingFace(llm=llm)
 
