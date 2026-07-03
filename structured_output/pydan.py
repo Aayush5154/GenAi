@@ -9,8 +9,8 @@ class Student(BaseModel):
     name : str = 'Aayush' # the default value 
     age : Optional[int] = None # it can be int or None
     email : EmailStr
-    cgpa : float = Field(gt=0, lt=10)
-
+    cgpa : float = Field(gt=0, lt=10, default=5, description="CGPA should be between 0 and 10") # it will check the value of cgpa is between 0 and 10 or not [its kind of a annotation]
+    #u can add the regex fort eh phone and email verification.
 
 # new_student = {'name': 32} # now u can make the validation as name was of string type but we gave it int so it will give error and will not create the object of student class
 
@@ -26,3 +26,7 @@ student = Student(**new_student) #object of Student class
 print(type(student)) #it makes the pydantic object 
 
 print(student) 
+
+student_json = student.model_dump_json()
+
+print(student_json)
