@@ -5,7 +5,6 @@ from typing import TypedDict
 load_dotenv()
 
 class Review(TypedDict):
-
     summary: str
     sentiment: str
 
@@ -27,7 +26,7 @@ print(result)
 print(result['summary'])
 print(result['sentiment'])
 
-# without giving the prompt still the models itself generated teh prompt 
+# without giving the prompt still the models itself generated the prompt 
 # this was the simple TypedDict
 
 
